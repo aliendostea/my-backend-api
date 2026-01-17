@@ -1,0 +1,103 @@
+// import notesData from "../data/notesData.json" assert { type: "json" };
+
+const notes = {
+  notes: [
+    {
+      id: "note-001",
+      type: "simpleNote",
+      title: "Shopping List",
+      note: "Don't forget to buy milk, eggs, and bread from the grocery store.",
+      dateCreated: "2025-01-15T10:30:00Z",
+      dateDeleted: "",
+      dateEdited: "2025-01-16T14:20:00Z",
+      pinned: true,
+    },
+    {
+      id: "note-002",
+      type: "checklist",
+      title: "Project Setup Tasks",
+      checklist: [
+        { id: "task-001", text: "Initialize Git repository", completed: true },
+        { id: "task-002", text: "Install dependencies", completed: true },
+        { id: "task-003", text: "Set up environment variables", completed: false },
+        { id: "task-004", text: "Configure database connection", completed: false },
+      ],
+      dateCreated: "2025-01-10T09:00:00Z",
+      dateDeleted: "",
+      dateEdited: "2025-01-18T11:45:00Z",
+      pinned: true,
+    },
+    {
+      id: "note-003",
+      type: "checklist",
+      title: "Weekly Workout Plan",
+      checklist: [
+        { id: "task-001", text: "Monday: Chest and Triceps", completed: true },
+        { id: "task-002", text: "Wednesday: Back and Biceps", completed: true },
+        { id: "task-003", text: "Friday: Legs", completed: false },
+        { id: "task-004", text: "Saturday: Cardio", completed: false },
+      ],
+      dateCreated: "2025-01-12T07:30:00Z",
+      dateDeleted: "",
+      dateEdited: "2025-01-17T18:00:00Z",
+      pinned: false,
+    },
+    {
+      id: "note-004",
+      type: "simpleNote",
+      title: "Meeting Notes - Q1 Planning",
+      note: "Discussed quarterly goals, budget allocation, and team hiring plans. Action items: finalize budget by Friday, schedule interviews next week.",
+      dateCreated: "2025-01-14T14:00:00Z",
+      dateDeleted: "",
+      dateEdited: "2025-01-14T15:30:00Z",
+      pinned: false,
+    },
+    {
+      id: "note-005",
+      type: "checklist",
+      title: "Home Renovation Checklist",
+      checklist: [
+        { id: "task-001", text: "Get design quotes from contractors", completed: true },
+        { id: "task-002", text: "Choose color palette and materials", completed: true },
+        { id: "task-003", text: "Obtain building permits", completed: false },
+        { id: "task-004", text: "Schedule renovation start date", completed: false },
+        { id: "task-005", text: "Arrange temporary accommodation", completed: false },
+      ],
+      dateCreated: "2025-01-08T16:15:00Z",
+      dateDeleted: "",
+      dateEdited: "2025-01-19T10:00:00Z",
+      pinned: false,
+    },
+  ],
+};
+
+const addNote = async (req, res) => {
+  // Logic for uploading a Note
+  res.status(201).json({ message: "Note added successfully" });
+};
+
+const editNote = async (req, res) => {
+  // Logic for editing a Note
+  res.status(201).json({ message: "Note edited successfully" });
+};
+
+const deleteNote = async (req, res) => {
+  // Logic for deleting a Note
+  res.status(200).json({ message: "Note deleted successfully" });
+};
+
+const getNotes = async (req, res) => {
+  // Logic for retrieving Notes
+  res.status(200).json({
+    success: true,
+    message: "Notes retrieved successfully",
+    data: notes,
+  });
+};
+
+export default {
+  addNote,
+  editNote,
+  deleteNote,
+  getNotes,
+};

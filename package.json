@@ -1,0 +1,25 @@
+{
+  "name": "my-backend-api",
+  "version": "1.0.0",
+  "description": "A backend API for handling photos, songs, likes, and users with different permissions.",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.0.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "zod": "3.22.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "author": "Ang.dev",
+  "license": "ISC"
+}
