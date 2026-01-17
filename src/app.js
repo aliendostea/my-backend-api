@@ -5,6 +5,7 @@ import userRoutes from "./routes/userRoutes.js";
 import photoRoutes from "./routes/photoRoutes.js";
 import songRoutes from "./routes/songRoutes.js";
 import likeRoutes from "./routes/likeRoutes.js";
+import notesRoutes from "./routes/notesRoutes.js";
 import validateSiteKey from "./middleware/validateSiteKey.js";
 import errorHandler from "./middleware/errorHandler.js";
 
@@ -18,6 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/api/users", userRoutes);
 app.use("/api/photos", photoRoutes);
 app.use("/api/songs", songRoutes);
+app.use("/api/notes", notesRoutes);
 
 // Apply API key validation specifically to likes routes
 app.use("/api/likes", validateSiteKey, likeRoutes);

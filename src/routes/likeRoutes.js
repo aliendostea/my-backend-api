@@ -3,11 +3,8 @@ import likeController from "../controllers/likeController.js";
 
 const router = express.Router();
 
-// Route to like an item
-router.post("/like", likeController.likeItem);
-
 // Route to unlike an item
-router.delete("/unlike/:id", likeController.unlikeItem);
+router.delete("/unlike/:id", likeController.removeLike);
 
 // Route to get likes for an item
 router.get("/likes/:itemId", likeController.getLikes);
